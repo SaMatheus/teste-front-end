@@ -1,0 +1,30 @@
+.header {
+  background: #041E50;
+  height: 37px;
+  width: 100%;
+  color: #FFFFFF;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 140px;
+}
+.header .info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 17px;
+  border-right: 1px solid #fff;
+}
+.header .info svg {
+  color: #FFFFFF;
+  margin-right: 5px;
+}
+.header .info p {
+  font-size: 10px;
+}
+.header .info:nth-last-child(1) {
+  border: none;
+}
+
+/*# sourceMappingURL=home.css.map */

@@ -1,0 +1,30 @@
+@import './colors'
+
+.header 
+  background: $color-primary
+  height: 37px
+  width: 100%
+  color: $color-secondary
+  display: grid
+  grid-template-columns: repeat(4, 1fr)
+  align-items: center
+  justify-content: space-between
+  padding: 0 140px
+  
+
+  .info 
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 17px
+    border-right: 1px solid #fff
+
+    svg
+      color: $color-secondary
+      margin-right: 5px
+    
+    p
+      font-size: 10px
+
+  .info:nth-last-child(1) 
+    border: none
