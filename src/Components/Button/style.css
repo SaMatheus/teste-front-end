@@ -1,0 +1,16 @@
+.button-component {
+  text-transform: uppercase;
+  background: transparent;
+  height: 50px;
+  width: 155px;
+  border: 1px solid #ffffff;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 13px;
+  margin-top: 22px;
+}
+
+.button-component:hover {
+  background: #ffffff;
+  color: #041e50;
+}

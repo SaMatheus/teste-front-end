@@ -1,5 +1,6 @@
 @import './colors'
 
+// HEADER
 .header 
   background: $color-primary
   height: 37px
@@ -8,23 +9,656 @@
   display: grid
   grid-template-columns: repeat(4, 1fr)
   align-items: center
-  justify-content: space-between
-  padding: 0 140px
-  
+  padding: 0 20px
+  text-transform: uppercase
 
   .info 
     display: flex
     align-items: center
     justify-content: center
     height: 17px
+    width: 100%
     border-right: 1px solid #fff
 
     svg
       color: $color-secondary
-      margin-right: 5px
+      margin-right: 8px
     
     p
       font-size: 10px
 
+  .info:nth-last-child(4) 
+    svg
+      margin-bottom: 3px
+
   .info:nth-last-child(1) 
     border: none
+    z-index: 100
+    svg
+      margin-bottom: 3px
+
+// SEARCH
+.search-container 
+  width: 100%
+  height: 75px
+  padding: 0 140px
+  
+  display: flex
+  align-items: center
+  justify-content: space-between
+  text-transform: uppercase
+
+  border-bottom: 1px solid #C6C6C6
+
+  .logo
+    height: 30px
+    width: 179px
+    background: url('../../assets/logo.png') no-repeat center center / contain
+
+  .search
+    border: 1px solid rgba(4, 30, 80, .5)
+    border-radius: 8px
+    height: 41px
+    width: 340px
+    padding: 0 0 0 25px
+
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+
+    input
+      border: 0 none
+    
+    button 
+      height: 100%
+      width: 50px
+      background: transparent
+      border: 0 none 
+
+      svg 
+
+  .contact
+    display: flex
+    align-items: center
+
+    svg
+      margin-right: 8px
+
+  .login
+    display: flex
+    align-items: center
+
+    svg
+      margin-right: 8px
+
+    p
+      display: flex
+      flex-direction: column
+      font-size: 10px
+      strong
+        font-size: 14px
+        font-weight: 900
+
+  .cart
+    display: flex
+    flex-direction: column
+    align-items: center
+    background: $color-primary
+    color: $color-secondary
+
+    height: 104px
+    width: 77px
+    padding: 20px 10px 10px 10px
+
+    z-index: 0
+
+    svg
+      margin-bottom: 5px
+
+    p
+      font-size: 7px
+      margin-top: 5px
+
+// NAV-BAR
+.nav-bar
+  height: 42px
+  padding: 0 280px 0 140px
+  text-transform: uppercase
+  .menu
+    height: 100%
+    display: flex
+    align-items: center
+    justify-content: space-between
+    font-size: 10px
+    li
+      display: flex
+      align-items: center 
+      a
+        color: $color-primary
+      svg
+        margin-bottom: 2px
+
+// INSTUMENT-BAR
+.instrument-select-bar
+  height: 170px
+  padding: 0 140px
+  display: flex
+  align-items: center
+  justify-content: center
+  text-transform: uppercase
+
+  .instrument-select-list
+    display: flex
+    justify-content: space-between
+    width: 100%
+    li
+      display: flex
+      flex-direction: column
+      align-items: center
+      &:hover .instrument 
+        opacity: 1 
+      .instrument
+        height: 100px
+        width: 100px
+        border-radius: 50%
+        opacity: 0.6
+      a
+        font-size: 14px
+        font-weight: 500
+        margin-top: 15px
+        color: $color-primary
+
+// OPTION-CONTAINER
+.options-container
+  height: 386px
+  width: 100%
+  display: flex
+  text-transform: uppercase
+  color: $color-secondary
+  background: $color-third
+
+  .option
+    height: 100%
+    width: 50%
+    display: flex
+    justify-content: center
+    align-items: center
+    position: relative 
+    &:nth-last-child(2)
+      &::before
+        content: ''
+        display: inline-block
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        z-index: 0
+        background: url('../../assets/bg1.png') no-repeat center center / cover
+        opacity: 0.6
+    &:nth-last-child(1)
+      &::before
+        content: ''
+        display: inline-block
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: url('../../assets/bg2.png') no-repeat center center / cover
+        opacity: 0.6
+
+  .option-text
+    z-index: 0
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    p
+      font-size: 14px
+      display: flex
+      flex-direction: column
+      align-items: center
+      &::after
+        content: ''
+        display: inline-block
+        width: 20%
+        height: 2px
+        background: $color-secondary
+        margin-top: 5px
+
+    h1
+      font-size: 40px
+      font-weight: 800
+      margin-top: 16px
+
+    h2
+      font-size: 40px
+      font-weight: 300
+
+// SPOTLIGHTS
+.spotlight-container
+  background: $color-secondary
+  display: flex
+  flex-direction: column
+  text-transform: uppercase
+  justify-content: center
+  align-items: center
+  padding: 100px 140px
+
+  h1
+    font-size: 25px
+    font-weight: 400
+    margin-bottom: 15px
+    strong
+      font-weight: 900
+    
+  p
+    font-size: 14px
+    color: $color-third
+  
+  .instruments-grid
+    width: 100%
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    gap: 48px 26px
+    margin-top: 70px
+    text-transform: capitalize
+
+    .item
+      width: 216px
+      height: 268px
+      text-align: center
+      position: relative
+      .animation-hover
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        cursor: pointer
+        .text
+          display: none
+          position: absolute
+          top: 155px
+          left: 80px
+          font-size: 14px
+          font-weight: 900
+          text-transform: capitalize
+        .search-icon
+          width: 35px
+          height: 35px
+          display: none
+          justify-content: center
+          align-items: center
+          border-radius: 50%
+          background: $color-primary
+          color: $color-secondary
+          position: absolute
+          top: 120px
+          left: 98px
+          box-shadow: 0 0 70px 70px $color-secondary
+          svg
+            font-size: 20px
+
+      img
+        transition-duration: .5s ease
+        width: 100%
+        height: 162px
+        z-index: -1
+      h1
+        font-size: 15px
+        font-weight: 700
+      p
+        font-size: 10px
+        line-height: 18px
+        color: $color-third
+        width: 100%
+      h2
+        font-size: 18px
+        font-weight: 700
+        margin-top: 10px
+      &:hover
+        box-shadow: 0 0 5px black
+        .animation-hover
+          .text
+            display: inline
+          .search-icon
+            display: flex
+        img
+          transform: translateY(-20px)
+          transition-duration: .5s 
+        img, p, h2
+          opacity: 0.5
+        h1
+          opacity: 0.2
+
+    .modal
+      display: none
+      justify-content: center
+      align-items: center
+      position: fixed
+      top: 0
+      left: 0
+      height: 100%
+      width: 100%
+      padding: 0
+      background: #000000c4
+      z-index: 100
+      .modal-content
+        background: $color-secondary
+        height: 353px
+        width: 770px
+        border-radius: 5px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 50px
+        position: relative
+        .modal-close-button
+          position: absolute
+          top: 10px
+          right: 10px
+          width: 30px
+          height: 30px
+          cursor: pointer
+        img
+          width: 250px
+          height: 250px
+          transform: translateY(0)
+        .modal-descripton
+          display: flex
+          flex-direction: column
+          justify-content: space-between
+          align-items: left
+          width: 400px
+          height: 350px
+          padding: 50px 10px
+          h1
+            letter-spacing: 1px
+            font-size: 20px
+          h2
+            font-weight: 900
+            font-size: 20px
+            letter-spacing: 1px
+          p
+            width: 300px
+          a
+            color: $color-primary
+            text-decoration: underline
+            display: flex
+            align-items: center
+            font-size: 12px
+            letter-spacing: 1px
+
+            .right-arrow
+              position: inherit
+              color: $color-third
+              height: 20px
+              width: 20px
+              margin-top: 4px
+          button
+            margin: 0
+            width: 170px
+            padding: 10px
+            font-size: 11px
+            font-weight: 900
+            border-radius: 5px
+            background: $color-primary
+            color: $color-secondary
+
+    .modal-active
+      display: flex
+
+  button
+    margin-top: 70px
+    border-color: $color-primary
+    color: $color-primary
+
+// BRANDS
+.brand-container
+  background: $color-secondary
+  padding: 50px 140px
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  text-transform: uppercase
+
+  h1
+    margin-bottom: 150px
+    font-weight: 400
+    strong
+      font-weight: 900
+  
+
+  .brand-slider
+    width: 100%
+    height: 50px
+    display: flex
+    justify-content: space-between
+    align-itmes: center
+    position: relative
+
+    .brand
+      width: 150px
+      height: 50px
+      display: flex
+      align-items: center
+      img
+        width: 100%
+
+    .left-arrow
+      position: absolute
+      top: 0
+      left: -100px
+      color: $color-third
+    .right-arrow
+      position: absolute
+      top: 0
+      right: -100px
+      color: $color-third
+
+// ABOUT
+.about-container
+  background: $color-secondary
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  text-transform: uppercase
+  padding: 100px 140px
+  h1
+    font-size: 26px
+    font-weight: 900
+    margin-bottom: 50px
+  p
+    font-family: 'Poppins', sans-serif
+    font-size: 12px
+    font-weight: 300
+    color: $color-third
+    text-align: center
+
+//SOCIAL-PROOF
+.social-proof-container
+  height: 200px
+  width: 100%
+  position: relative
+
+  .social-proof
+    height: 175px
+    width: 970px
+    background: #F7F7F7
+    border-radius: 5px
+    position: absolute
+    bottom: -50px
+    left: 140px
+    z-index: 1
+    box-shadow: 3px 3px 10px black
+    display: flex
+    justify-content: center
+    align-items: center
+
+    .social-proof-slider
+      height: 80px
+      width: 730px
+      display: flex
+      align-items: center
+      position: relative
+
+      .left-arrow
+        position: absolute
+        top: 25px
+        left: -100px
+        color: #707070
+        font-size: 30px
+      .right-arrow
+        position: absolute
+        top: 25px
+        right: -100px
+        color: #707070
+        font-size: 30px
+
+      .picture
+        height: 80px
+        width: 80px
+        background: url('../../assets/picture.png') no-repeat center center / contain
+      .name-and-profession
+        display: flex
+        flex-direction: column
+        justify-content: center
+        width: 100px
+        margin: 0 10px
+        
+        h1
+          font-size: 12px
+          font-weight: 900
+        p
+          font-size: 10px
+          font-weight: 300
+          text-align: left
+      .comment
+        height: 76px
+        width: 550px
+        background: $color-secondary
+        border-radius: 5px
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 0 15px
+        position: relative
+        box-shadow: 4px 3px 6px black
+        &::before
+          content: ''
+          display: inline-block
+          border: 10px solid
+          border-color: transparent $color-secondary transparent transparent
+          position: absolute
+          left: -20px
+        p
+          font-size: 13px
+          color: $color-third
+
+// CONTACT-CONTAINER
+.contact-container
+  height: 390px
+  width: 100%
+  background: $color-primary
+  display: grid
+  grid-template-columns: 1fr 1fr 1fr 1.3fr
+  gap: 0 30px 
+  justify-content: space-between
+  align-items: center
+  padding: 0 140px
+  .contact-info,
+  .contact-form
+    height: 249px
+  .contact-info 
+    color: $color-secondary
+    ul
+      text-transform: uppercase
+      margin-top: 40px
+      h1
+        font-size: 14px
+        font-weight: 900
+        margin-bottom: 15px
+        letter-spacing: 1px
+      li
+        font-size: 10px
+        margin-bottom: 10px
+    .social-media
+      margin-top: 50px
+      display: flex
+      justify-content: space-between
+      width: 100px
+      svg
+        font-size: 15px
+        color: white
+    .cards
+      margin-top: 3px
+      width: 33px
+      height: 21px
+      display: grid
+      grid-template-columns: repeat(3, 1fr)
+      gap: 5px
+    .security
+      display: flex
+      gap: 0 8px
+      width: 76px
+      height: 42px
+  .contact-form
+    text-transform: uppercase
+    background: $color-secondary
+    border-radius: 5px
+    padding: 25px
+    display: flex
+    flex-direction: column
+    h1
+      font-size: 14px
+      font-weight: 300
+      margin-bottom: 5px
+      letter-spacing: 1px
+    p
+      font-size: 10px
+      margin-bottom: 5px
+    label
+      margin-top: 10px
+      input
+        border: none
+        border-bottom: 1px solid rgba(0, 0, 0, 0.212)
+        text-transform: uppercase
+        padding: 10px 15px
+        width: 100%
+        font-weight: 100
+        font-size: 12px
+        color: $color-primary
+
+    button
+      border-color: $color-primary
+      color: $color-primary
+      font-weight: 800
+      width: 120px
+      height: 40px
+
+
+
+// FOOTER
+.footer
+  display: flex
+  align-items: center
+  justify-content: space-between
+  height: 60px
+  width: 100%
+  padding: 15px 140px
+
+  p
+    width: 500px
+    font-size: 10px
+    font-weight: 400
+    color: $color-third
+
+  .sponsors
+    width: 200px
+    display: flex
+    align-items: center
+    justify-content: space-between
